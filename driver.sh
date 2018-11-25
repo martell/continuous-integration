@@ -133,6 +133,7 @@ build_linux() {
     cat ../configs/common.config >> .config
     # Some torture test configs cause issues on x86_64
     [[ $ARCH != "x86_64" ]] && cat ../configs/tt.config >> .config
+    [[ $ARCH != "ppc64le" ]] && cat ../configs/ppc64le.config >> .config
   fi
   # Make sure we build with CONFIG_DEBUG_SECTION_MISMATCH so that the
   # full warning gets printed and we can file and fix it properly.
