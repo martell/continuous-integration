@@ -37,6 +37,11 @@ setup_variables() {
             branch=${REPO}
             url=https://android.googlesource.com/kernel/${tree}
             ;;
+        "rpi"*)
+            tree=linux
+            branch=${REPO}
+            url=https://github.com/raspberrypi/linux
+            ;;
         "linux")
             owner=torvalds
             tree=linux
@@ -85,6 +90,7 @@ setup_variables() {
                         *) config=gki_defconfig ;;
                     esac
                     ;;
+                rpi-*) config=bcm2711_defconfig ;;
                 *) config=defconfig ;;
             esac
             make_target=Image.gz
