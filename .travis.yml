@@ -28,6 +28,9 @@ jobs:
       env: ARCH=x86 LLVM=1 LLVM_IAS=1
     - name: "ARCH=x86_64 LLVM=1 LLVM_IAS=1"
       env: ARCH=x86_64 LLVM=1 LLVM_IAS=1
+    # rpi4
+    - name: "ARCH=arm64 LLVM=1 LLVM_IAS=1 REPO=rpi-5.9.y"
+      env: ARCH=arm64 LLVM=1 LLVM_IAS=1 REPO=rpi-5.9.y
     # linux (cron only)
     #
     # linux-next (cron only)
