@@ -2,8 +2,16 @@ language: cpp
 jobs:
   include:
     # rpi4
+    - name: "ARCH=arm64 REPO=rpi-5.9.y"
+      env: ARCH=arm64 REPO=rpi-5.9.y
+    - name: "ARCH=arm64 LD=ld.lld REPO=rpi-5.9.y"
+      env: ARCH=arm64 LD=ld.lld REPO=rpi-5.9.y
+    - name: "ARCH=arm64 LLVM=1 REPO=rpi-5.9.y"
+      env: ARCH=arm64 LLVM=1 REPO=rpi-5.9.y
     - name: "ARCH=arm64 LLVM=1 LLVM_IAS=1 REPO=rpi-5.9.y"
       env: ARCH=arm64 LLVM=1 LLVM_IAS=1 REPO=rpi-5.9.y
+    - name: "ARCH=arm64 LD=ld.lld LLVM=1 LLVM_IAS=1 REPO=rpi-5.9.y"
+      env: ARCH=arm64 LD=ld.lld LLVM=1 LLVM_IAS=1 REPO=rpi-5.9.y
     # linux (cron only)
     #
     # linux-next (cron only)
